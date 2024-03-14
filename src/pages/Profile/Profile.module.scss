@@ -1,0 +1,96 @@
+@use '/src/styles/abstracts' as a;
+
+.container {
+	height: 92vh;
+	background-color: a.$bg-color;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: a.$primary-color;
+	.vl {
+		border-left: 1px solid a.$hr;
+		height: 10rem;
+	}
+	.profile__image__edit {
+		max-width: 4rem;
+		font-family: a.$roboto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: rgb(245, 245, 245);
+		border: 1px solid #ccc;
+		border-radius: 0.3rem;
+		position: relative;
+		transform: translate(150px, -33px);
+		cursor: pointer;
+		p {
+			font-size: 0.9rem;
+			padding: 0.3rem;
+		}
+	}
+	.profile__info {
+		span {
+			font-weight: a.$medium;
+		}
+		.icon__close {
+			font-size: 1.5rem;
+			display: block;
+			margin-left: auto;
+		}
+		.profile__info__edit {
+			width: 15rem;
+			font-family: a.$roboto;
+			display: flex;
+			flex-direction: column;
+			p {
+				font-size: 0.8rem;
+			}
+			label {
+				padding: 0.5rem 0;
+				font-weight: a.$medium;
+			}
+			input,
+			textarea {
+				font-family: a.$roboto;
+				border-radius: 0.3rem;
+				font-size: 0.9rem;
+				padding: 0.5rem;
+				border: 1px solid a.$border;
+			}
+		}
+		button {
+			margin-top: 2rem;
+			display: block;
+			margin-left: auto;
+		}
+		p {
+			font-family: a.$roboto;
+			font-weight: a.$light;
+			padding: 0.5rem 0;
+		}
+
+		hr {
+			max-width: 90%;
+			border-top: 1px solid a.$hr;
+			margin: 0.5rem 0;
+		}
+		.profile__edit {
+			display: flex;
+			align-items: center;
+			p {
+				font-weight: a.$light;
+				padding: 0.5rem;
+				cursor: pointer;
+				&:hover {
+					font-weight: a.$medium;
+				}
+			}
+			.icon {
+				font-size: 1.5rem;
+			}
+		}
+		.profile__btn {
+			display: flex;
+		}
+	}
+}

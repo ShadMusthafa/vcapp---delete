@@ -1,0 +1,147 @@
+@use '/src/styles/abstracts' as a;
+
+.card {
+	font-family: a.$roboto;
+	border: 1px solid transparent;
+	border-radius: 0.3rem;
+	overflow: hidden;
+	background-color: rgb(255, 255, 255);
+}
+.auth {
+	width: 50%;
+	box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.1);
+}
+.profile {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	padding: 1.5rem;
+	box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.1);
+}
+.crop__profile {
+	max-width: 55%;
+	padding: 2rem 1.5rem;
+	box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.contact {
+	width: 70%;
+	box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.1);
+}
+.password {
+	padding: 1.5rem;
+}
+
+.items__info {
+	max-width: 15rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+	border: 1px solid rgb(230, 230, 230);
+	gap: 1rem;
+}
+
+.add__item,
+.delete__item {
+	max-width: 80%;
+	padding: 1.5rem;
+}
+
+.item__details {
+	font-family: a.$roboto;
+	width: 50%;
+	height: 92vh;
+	padding: 1.5rem;
+	background-color: rgb(255, 255, 255);
+	border-top-left-radius: 0.3rem;
+	border-bottom-left-radius: 0.3rem;
+	box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.1);
+	overflow-y: scroll;
+}
+
+.item__details__open {
+	@extend .item__details;
+	animation: slide-right-to-left 0.5s ease;
+}
+.item__details__close {
+	@extend .item__details;
+	animation: slide-left-to-right 0.5s ease;
+}
+
+@keyframes slide-right-to-left {
+	0% {
+		transform: translateX(10rem);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+@keyframes slide-left-to-right {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(30rem);
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.contact {
+		width: 65%;
+	}
+}
+@media screen and (min-width: 992px) {
+	.auth {
+		width: 40%;
+	}
+	.contact {
+		width: 55%;
+	}
+	.item__details {
+		width: 45%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.auth {
+		width: 30%;
+	}
+	.contact,
+	.item__details {
+		width: 40%;
+	}
+	.add__item {
+		max-width: 65%;
+	}
+}
+@media screen and (min-width: 1400px) {
+	.auth {
+		width: 25%;
+	}
+	.contact,
+	.item__details {
+		width: 30%;
+	}
+	.add__item {
+		max-width: 55%;
+	}
+}
+
+@media screen and (min-width: 1600px) {
+	.auth {
+		width: 20%;
+	}
+	.contact,
+	.item__details {
+		width: 25%;
+	}
+	.add__item {
+		max-width: 45%;
+	}
+}
+@media screen and (min-width: 1900px) {
+	.add__item {
+		max-width: 40%;
+	}
+}

@@ -1,0 +1,62 @@
+@use '/src/styles/abstracts' as a;
+
+.nav {
+	min-height: 10vh;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-family: a.$roboto;
+	background-color: a.$primary-color;
+
+	.container {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 5%;
+		.logo {
+			color: a.$secondary-color;
+			display: flex;
+			gap: 0.7rem;
+			font-family: a.$roboto;
+			font-weight: a.$bold;
+			font-size: 1.6rem;
+			align-items: center;
+			p {
+				font-size: 1.2rem;
+			}
+		}
+	}
+	ul {
+		color: white;
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+
+		margin-right: 5%;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.nav {
+		.container {
+			.logo {
+				font-size: 1.8rem;
+				p {
+					font-size: 1.4rem;
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 1200px) {
+	.nav {
+		.container {
+			.logo {
+				font-size: 1.9rem;
+				p {
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+}

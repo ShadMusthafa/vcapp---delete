@@ -1,0 +1,207 @@
+@use '/src/styles/abstracts' as a;
+
+.list__container {
+	padding: 1rem 2rem;
+	hr {
+		border: 1px solid a.$hr;
+	}
+	.list__topSection {
+		padding: 2rem 0 1.5rem 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		h3 {
+			font-size: 1.5rem;
+			font-family: a.$roboto;
+			font-weight: a.$medium;
+		}
+	}
+	.list__loader {
+		display: flex;
+		justify-content: center;
+		margin-top: 3rem;
+	}
+	.list__table {
+		font-family: a.$roboto;
+		p {
+			margin-top: 2rem;
+			text-align: center;
+		}
+		.list__table__wrapper {
+			overflow: hidden;
+			overflow-y: scroll;
+			height: 25rem;
+			border-bottom: 1px solid a.$hr;
+			border-left: 1px solid a.$hr;
+			.list__title {
+				height: 2rem;
+			}
+			.list__info {
+				height: 3.3rem;
+				.list__info__name {
+					width: 20rem;
+				}
+			}
+			table {
+				border-collapse: collapse;
+				width: 100%;
+				font-size: 1rem;
+			}
+			th,
+			td {
+				text-align: left;
+				padding: 0.5rem;
+			}
+			th {
+				position: sticky;
+				top: 0;
+				font-weight: a.$regular;
+				background-color: a.$primary-color;
+				color: white;
+			}
+			tr {
+				max-height: 10rem;
+				border-bottom: 1px solid #ccc;
+			}
+
+			tr:nth-child(odd) {
+				background-color: rgb(234, 234, 234);
+			}
+			tr:nth-child(even) {
+				background-color: #fff;
+			}
+			.list__icons__container {
+				display: flex;
+				width: 5rem;
+				gap: 0.5rem;
+			}
+			.list__icons__edit,
+			.list__icons__delete {
+				display: none;
+				width: 2rem;
+				height: 2rem;
+				border-radius: 50%;
+				font-size: 1.2rem;
+				color: rgb(128, 128, 128);
+				background-color: rgb(236, 236, 236);
+				cursor: pointer;
+			}
+			.list__icons__edit:hover {
+				color: a.$primary-color;
+				background-color: white;
+			}
+			.list__icons__delete:hover {
+				color: a.$delete;
+				background-color: white;
+			}
+
+			tr:hover {
+				background-color: #ccc;
+				.list__icons__edit,
+				.list__icons__delete {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+
+				.list__date {
+					display: none;
+				}
+			}
+		}
+	}
+	.pagination {
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 2rem 0;
+		font-size: 1rem;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		left: 0;
+	}
+
+	.pagination,
+	.page__num,
+	.page__next__prev {
+		font-family: a.$roboto;
+		padding: 5px 10px;
+		cursor: pointer;
+		border-radius: 3px;
+		margin: 2px;
+	}
+
+	.pagination .page__num {
+		border: 1px solid a.$primary-color;
+	}
+
+	.page__active {
+		background-color: a.$primary-color;
+		color: rgb(255, 255, 255);
+		height: 100%;
+	}
+	.pagination .page__num:hover {
+		color: #fff;
+		background-color: a.$primary-color;
+	}
+
+	.page__disabled__link {
+		color: rgb(182, 182, 182);
+		cursor: none;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.list__container {
+		padding: 1rem 2rem;
+	}
+}
+@media screen and (min-width: 9920px) {
+	.list__container {
+		padding: 1rem 3.5rem;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.list__container {
+		padding: 1rem 3.5rem;
+		.list__table {
+			.list__table__wrapper {
+				height: 15.2rem;
+			}
+		}
+	}
+}
+@media screen and (min-width: 1400px) {
+	.list__container {
+		padding: 1rem 4.5rem;
+		.list__topSection {
+			padding: 2.5rem 0 1.5rem 0;
+		}
+		.list__table {
+			.list__table__wrapper {
+				height: 13.2rem;
+			}
+		}
+	}
+}
+@media screen and (min-width: 1600px) {
+	.list__container {
+		padding: 1.5rem 5.5rem;
+	}
+}
+@media screen and (min-width: 1900px), screen and (min-height: 880px) {
+	.list__container {
+		padding: 2rem 7.5rem;
+		.list__topSection {
+			padding: 3rem 0 1.5rem 0;
+		}
+		.list__table {
+			.list__table__wrapper {
+				height: 17rem;
+			}
+		}
+	}
+}

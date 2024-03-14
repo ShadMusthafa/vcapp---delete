@@ -1,0 +1,49 @@
+@use '/src/styles/abstracts' as a;
+
+.contact {
+	height: 85vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: a.$roboto;
+	h3,
+	p {
+		text-align: center;
+	}
+	h3 {
+		font-weight: a.$bold;
+		padding: 1.5rem;
+	}
+	p {
+		line-height: 1.5rem;
+		padding: 0 1.5rem;
+	}
+	.contact__info {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		padding: 1.5rem;
+		label {
+			padding: 0.5rem 0;
+			font-weight: a.$medium;
+		}
+		input,
+		textarea {
+			font-family: a.$roboto;
+			font-weight: a.$light;
+			border-radius: 0.3rem;
+			font-size: 1rem;
+			padding: 0.5rem;
+			// border: none;
+			border: 1px solid #ccc;
+		}
+		input {
+			margin-bottom: 1rem;
+		}
+	}
+	button {
+		display: flex;
+		margin: 0 auto;
+		margin-bottom: 1.5rem;
+	}
+}

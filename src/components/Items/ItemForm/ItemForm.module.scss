@@ -1,0 +1,73 @@
+@use '/src/styles/abstracts' as a;
+
+.form__items {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 17.3rem 10rem;
+	gap: 1rem;
+	.card__image {
+		border: 1px solid a.$border;
+		border-radius: 0.3rem;
+		padding: 1rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		span {
+			font-size: 0.7rem;
+			padding-top: 0.5rem;
+		}
+		input,
+		p {
+			margin-top: auto;
+		}
+		.image__preview {
+			display: flex;
+			justify-content: center;
+			flex: 1;
+			padding: 0.5rem 1rem;
+			overflow: hidden;
+			transition: all 0.3s;
+
+			img {
+				width: auto;
+				height: auto;
+				max-width: 14rem;
+				max-height: 10rem;
+			}
+		}
+	}
+	input[type='file'] {
+		border: 1px solid a.$border;
+		border-radius: 0.3rem;
+	}
+	input::file-selector-button {
+		font-weight: a.$bold;
+		color: a.$primary-color;
+		padding: 0.5em;
+		border: none;
+		border-radius: 0.3rem;
+		margin-right: 0.5rem;
+	}
+	.form__item,
+	.form__category,
+	.form__price,
+	.form__quantity,
+	.form__description {
+		display: flex;
+		flex-direction: column;
+		label {
+			padding: 0.5rem 0;
+			font-weight: a.$medium;
+		}
+		input {
+			border-radius: 0.3rem;
+			font-size: 0.9rem;
+			padding: 0.5rem;
+			border: 1px solid a.$border;
+		}
+	}
+	.form__description {
+		grid-column: span 2;
+	}
+}

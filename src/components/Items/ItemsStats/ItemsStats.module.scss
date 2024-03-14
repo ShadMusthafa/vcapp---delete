@@ -1,0 +1,53 @@
+@use '/src/styles/abstracts' as a;
+
+.itemsStats__container {
+	padding: 1rem 2rem;
+	h3 {
+		font-size: 1.5rem;
+		font-family: a.$roboto;
+		font-weight: a.$medium;
+	}
+	.itemsStats__info {
+		display: flex;
+		justify-content: center;
+		gap: 0.5rem;
+		padding-top: 1.5rem;
+		.icon1 {
+			background-color: lighten(#6d1be7, 40);
+		}
+		.icon2 {
+			background-color: lighten(#009764, 50);
+		}
+		.icon3 {
+			background-color: lighten(#ff1818, 40);
+		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.itemsStats__container {
+		.itemsStats__info {
+			gap: 1.5rem;
+		}
+	}
+}
+@media screen and (min-width: 1200px) {
+	.itemsStats__container {
+		padding: 1rem 3.5rem;
+	}
+}
+@media screen and (min-width: 1400px) {
+	.itemsStats__container {
+		padding: 1rem 4.5rem;
+	}
+}
+@media screen and (min-width: 1600px) {
+	.itemsStats__container {
+		padding: 1.5rem 5.5rem;
+	}
+}
+@media screen and (min-width: 1900px) {
+	.itemsStats__container {
+		padding: 1.5rem 7.5rem;
+	}
+}

@@ -1,0 +1,86 @@
+@use '/src/styles/abstracts' as a;
+
+.container {
+	position: absolute;
+	width: 13rem;
+	top: 3.5rem;
+	right: 3rem;
+	padding-top: 1.5rem;
+	background-color: rgb(255, 255, 255);
+	border-radius: 0.3rem;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	animation: slide-up 0.5s ease;
+	.userInfo {
+		display: flex;
+		flex-direction: column;
+		gap: 0.3rem;
+		align-items: center;
+		color: a.$primary-color;
+		margin-bottom: 2rem;
+
+		.imageCropper {
+			width: 6rem;
+			height: 6rem;
+			overflow: hidden;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			margin-bottom: 1rem;
+			img {
+				max-width: 8rem;
+			}
+		}
+	}
+
+	hr {
+		border-top: 1px solid a.$hr;
+	}
+	.logoutBtn {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+		padding: 1rem;
+		font-size: 1rem;
+		border: none;
+		background-color: transparent;
+		color: a.$primary-color;
+		font-family: a.$roboto;
+		width: inherit;
+		&:hover {
+			background-color: a.$hover-dropdown;
+		}
+		.icon {
+			width: 1.6em;
+			font-size: 1.5rem;
+		}
+	}
+	// .logoutBtn:hover {
+	// 	background-color: rgb(195, 195, 195);
+	// }
+}
+
+@keyframes slide-up {
+	0% {
+		transform: translateY(-2rem);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.container {
+		right: 4rem;
+	}
+}
+@media screen and (min-width: 1400px) {
+	.container {
+		right: 4.5rem;
+	}
+}
+
+@media screen and (min-width: 1600px) {
+	.container {
+		right: 5.5rem;
+	}
+}

@@ -1,0 +1,36 @@
+@use '/src/styles/abstracts' as a;
+
+.quill {
+	.ql-toolbar {
+		background-color: rgb(239, 239, 239);
+		border-top-left-radius: 0.3rem;
+		border-top-right-radius: 0.3rem;
+	}
+	.ql-container {
+		height: 4rem;
+		font-family: a.$roboto;
+		font-size: 0.9rem;
+		font-style: normal;
+		border-bottom-left-radius: 0.3rem;
+		border-bottom-right-radius: 0.3rem;
+		overflow-y: auto;
+	}
+	.ql-editor {
+		max-width: 37rem;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.quill {
+		.ql-container {
+			height: 5rem;
+		}
+	}
+}
+@media screen and (min-width: 768px) {
+	.quill {
+		.ql-editor {
+			max-width: 47rem;
+		}
+	}
+}

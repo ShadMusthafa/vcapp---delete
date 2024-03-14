@@ -1,0 +1,59 @@
+@use '/src/styles/abstracts' as a;
+
+.modal__background {
+	height: 92vh;
+	width: (100vw - a.$sidebar_close);
+	background-color: rgba(136, 136, 136, 0.7);
+	position: fixed;
+	z-index: 99999;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	.modal__header {
+		display: flex;
+	}
+	h3 {
+		width: 100%;
+		text-align: center;
+		padding-bottom: 1rem;
+	}
+	.modal__close {
+		font-size: 1.5rem;
+		margin-left: auto;
+		cursor: pointer;
+	}
+	.modal__buttons {
+		padding-top: 1rem;
+		display: flex;
+		justify-content: center;
+		gap: 1.5rem;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.modal__background {
+		width: (100vw - a.$sidebar_close_992px_screen);
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.modal__background {
+		width: (100vw - a.$sidebar_close_1200px_screen);
+	}
+}
+@media screen and (min-width: 1400px) {
+	.modal__background {
+		width: (100vw - a.$sidebar_close_1400px_screen);
+	}
+}
+@media screen and (min-width: 1600px) {
+	.modal__background {
+		width: (100vw - a.$sidebar_close_1600px_screen);
+	}
+}
+@media screen and (min-width: 1900px) {
+	.modal__background {
+		width: (100vw - a.$sidebar_close_1600px_screen);
+	}
+}

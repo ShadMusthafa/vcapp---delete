@@ -1,0 +1,79 @@
+@use '/src/styles/abstracts' as a;
+
+.auth {
+	color: a.$primary-color;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: a.$bg-color;
+	font-family: a.$roboto;
+	.form {
+		display: flex;
+		flex-direction: column;
+		padding: 1rem;
+		animation: slide-right 0.5s ease;
+		form {
+			margin-top: 1rem;
+			.input {
+				display: flex;
+				flex-direction: column;
+				gap: 1.5rem;
+				input {
+					font-size: 1.1rem;
+					padding: 0.5rem 0;
+					border: none;
+					border-bottom: 2px solid #ccc;
+				}
+			}
+			.forgotPassword {
+				display: block;
+				margin-top: 1rem;
+				font-size: 0.875rem;
+				text-align: end;
+				color: a.$primary-color;
+			}
+			.authButton {
+				width: 100%;
+				margin: 1.5rem 0;
+			}
+		}
+		hr {
+			border: none;
+			height: 1px;
+			background-color: a.$hr;
+		}
+		.register {
+			margin: 1.5rem 0 1rem;
+			font-size: 0.875rem;
+			text-align: center;
+		}
+
+		.formTop {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 0.5rem;
+			.icon {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+
+@keyframes slide-right {
+	0% {
+		transform: translateX(-10rem);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+@keyframes slide-left {
+	0% {
+		transform: translateX(10rem);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}

@@ -1,0 +1,40 @@
+@use '/src/styles/abstracts' as a;
+
+.header {
+	min-height: 8vh;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 0.5rem;
+	font-family: a.$roboto;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	z-index: 2;
+	position: relative;
+
+	.imageCropperHeader {
+		width: 2.5rem;
+		height: 2.5rem;
+		overflow: hidden;
+		border-radius: 50%;
+		background-color: white;
+		display: flex;
+		justify-content: center;
+	}
+	.text {
+		display: flex;
+		gap: 0.5rem;
+	}
+	.icon {
+		margin-right: 5%;
+		font-size: 1.3rem;
+	}
+	.iconRotateDown {
+		transform: rotate(180deg);
+		transition: transform 0.5s ease;
+	}
+	.iconRotateUp {
+		transform: rotate(0deg);
+		transition: transform 0.5s ease;
+	}
+}

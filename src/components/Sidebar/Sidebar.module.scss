@@ -1,0 +1,121 @@
+@use '/src/styles/abstracts' as a;
+
+.layout {
+	display: flex;
+
+	.sidebar {
+		position: static;
+		width: a.$sidebar_open;
+		height: 100vh;
+		flex-shrink: 0;
+		background-color: a.$primary-color;
+		overflow: auto;
+		transition: all 0.5s;
+
+		.topSection {
+			display: flex;
+			align-items: center;
+			padding: 0.6rem 1.2rem;
+			transition: all 0.5s;
+			min-height: 8vh;
+			color: a.$secondary-color;
+			border-bottom: 2px solid #36414f;
+			.logo {
+				p {
+					font-size: 1.2rem;
+				}
+			}
+			.logo,
+			.hamburguerIcon {
+				gap: 0.7rem;
+				font-family: a.$roboto;
+				font-weight: a.$bold;
+				font-size: 1.6rem;
+				align-items: center;
+			}
+			.hamburguerIcon {
+				display: flex;
+				margin-left: 4.5rem;
+				transition: all 0.3s;
+				cursor: pointer;
+			}
+			.hamburguerIconClosed {
+				margin-left: 0;
+			}
+		}
+	}
+	.sidebarClosed {
+		width: a.$sidebar_close;
+		z-index: 999999;
+	}
+	main {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.layout {
+		.sidebar {
+			width: a.$sidebar_open_992px_screen;
+		}
+		.sidebarClosed {
+			width: a.$sidebar_close_992px_screen;
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.layout {
+		.sidebar {
+			width: a.$sidebar_open_1200px_screen;
+			.topSection {
+				.hamburguerIcon {
+					margin-left: 6rem;
+				}
+				.hamburguerIconClosed {
+					margin-left: 0;
+				}
+			}
+		}
+		.sidebarClosed {
+			width: a.$sidebar_close_1200px_screen;
+		}
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	.layout {
+		.sidebar {
+			width: a.$sidebar_open_1400px_screen;
+			.topSection {
+				.hamburguerIcon {
+					margin-left: 7.5rem;
+				}
+				.hamburguerIconClosed {
+					margin-left: 0;
+				}
+			}
+		}
+		.sidebarClosed {
+			width: a.$sidebar_close_1400px_screen;
+		}
+	}
+}
+@media screen and (min-width: 1600px) {
+	.layout {
+		.sidebar {
+			width: a.$sidebar_open_1600px_screen;
+			.topSection {
+				.hamburguerIcon {
+					margin-left: 7.5rem;
+				}
+				.hamburguerIconClosed {
+					margin-left: 0;
+				}
+			}
+		}
+		.sidebarClosed {
+			width: a.$sidebar_close_1600px_screen;
+		}
+	}
+}

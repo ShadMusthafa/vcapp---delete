@@ -1,0 +1,33 @@
+@use '/src/styles/abstracts' as a;
+
+.info__iconBackground {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.info__icon {
+	font-size: 1.3rem;
+	display: flex;
+}
+.info__text {
+	text-align: end;
+	h4 {
+		font-size: 1.5rem;
+		font-weight: a.$black;
+		padding-bottom: 0.5rem;
+	}
+	p {
+		font-weight: a.$light;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.info__iconBackground {
+		width: 3.5rem;
+		height: 3.5rem;
+	}
+}

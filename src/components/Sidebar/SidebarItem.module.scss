@@ -1,0 +1,46 @@
+@use '/src/styles/abstracts' as a;
+
+.active {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: auto;
+	background-color: a.$bg-active;
+	font-weight: a.$bold;
+}
+.active::after {
+	content: '';
+	position: absolute;
+	width: 0.3rem;
+	height: 100%;
+	top: 0;
+	background-color: a.$secondary-color;
+}
+
+.sidebarTitle {
+	display: flex;
+	font-size: 1.2em;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 1.2rem;
+	color: white;
+	font-family: a.$roboto;
+
+	span {
+		display: flex;
+		align-items: center;
+		transition: all 0.5s;
+		font-size: 1rem;
+
+		.icon {
+			color: a.$secondary-color;
+			display: flex;
+			align-items: center;
+			width: 1.5em;
+			font-size: 25px;
+		}
+	}
+}
+.sidebarTitle:hover {
+	background-color: a.$bg-active;
+}

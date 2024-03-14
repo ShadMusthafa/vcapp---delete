@@ -1,0 +1,174 @@
+@use '/src/styles/abstracts' as a;
+
+.home {
+	background-color: a.$primary-color;
+	min-height: 100vh;
+	.home__container {
+		background-color: a.$primary-color;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 5%;
+		gap: 3rem;
+		.home__hero_text {
+			font-family: a.$roboto;
+			width: 50%;
+			color: #fff;
+
+			h2 {
+				display: block;
+				margin-bottom: 1rem;
+			}
+
+			p {
+				line-height: 1.6rem;
+				font-weight: a.$light;
+			}
+			button {
+				margin: 2rem 0;
+			}
+			.home__numbers {
+				display: flex;
+				justify-content: flex-start;
+				align-items: flex-start;
+			}
+		}
+		.home__hero__img {
+			img {
+				width: auto;
+				height: auto;
+				max-width: 21.5rem;
+				max-height: 24rem;
+			}
+		}
+	}
+}
+
+.number__text {
+	margin-right: 1rem;
+	h3 {
+		color: a.$secondary-color;
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.home {
+		.home__container {
+			.home__hero_text {
+				width: 45%;
+				h2 {
+					font-size: 1.7rem;
+					margin-bottom: 1.2rem;
+				}
+			}
+			.home__hero__img {
+				display: flex;
+				justify-content: flex-end;
+				img {
+					width: auto;
+					height: auto;
+					max-width: 23rem;
+					max-height: 24rem;
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 992px) {
+	.home {
+		.home__container {
+			.home__hero_text {
+				width: 45%;
+				h2 {
+					font-size: 2rem;
+				}
+				p {
+					font-size: 1rem;
+				}
+			}
+			.home__hero__img {
+				width: 50%;
+				img {
+					width: auto;
+					height: auto;
+					max-width: 37rem;
+					max-height: 30rem;
+				}
+			}
+		}
+	}
+	.number__text {
+		h3 {
+			font-size: 1.7rem;
+		}
+	}
+}
+@media screen and (min-width: 1200px) {
+	.home {
+		.home__container {
+			margin: 0 10%;
+			gap: 5rem;
+			.home__hero_text {
+				width: 40%;
+				h2 {
+					margin-bottom: 1.5rem;
+				}
+				p {
+					font-size: 1.1rem;
+				}
+				button {
+					margin: 2.5rem 0;
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 1400px) {
+	.home {
+		.home__container {
+			margin: 0 10%;
+			gap: 5rem;
+			.home__hero_text {
+				h2 {
+					font-size: 2.2rem;
+				}
+				p {
+					font-size: 1.2rem;
+					line-height: 1.8rem;
+				}
+				button {
+					margin: 2.8rem 0;
+				}
+			}
+		}
+	}
+	.number__text {
+		margin-right: 2rem;
+		h3 {
+			font-size: 1.7rem;
+		}
+	}
+}
+@media screen and (min-width: 1600px) {
+	.home {
+		.home__container {
+			margin: 0 15%;
+			.home__hero_text {
+				h2 {
+					font-size: 2.2rem;
+				}
+				p {
+					font-size: 1.2rem;
+					line-height: 1.8rem;
+				}
+			}
+		}
+	}
+	.number__text {
+		margin-right: 2.5rem;
+		h3 {
+			font-size: 1.9rem;
+		}
+	}
+}
